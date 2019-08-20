@@ -11,4 +11,24 @@ public class board
     {
         return "board";
     }
+    @RequestMapping(value = "/list")
+    public String list()
+    {
+        return "list";
+    }
+    @RequestMapping(value = "/edit")
+    public String edit()
+    {
+        return "edit";
+    }
+    @RequestMapping(value = "/view")
+    public String view()
+    {
+        return "view";
+    }
+    @RequestMapping(value = "/delete")
+    public String del()
+    {
+        return "delete";
+    }
 }
