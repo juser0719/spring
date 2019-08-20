@@ -1,4 +1,4 @@
-package com.example.spring.controller;
+/*package com.example.spring.controller;
 
 import java.util.Map;
 
@@ -12,13 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 public class OrganizationController
 {
-   @RequestMapping(value = "/input", method = RequestMethod.GET)
+   @RequestMapping(value = "/", method = RequestMethod.GET)
    public void some(){}
-   @RequestMapping(value = "/read", method = RequestMethod.GET)
+   @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView read(@RequestParam Map<String , Object> paramMap,ModelAndView modelandView) 
     {
     
-    String viewName = "/read";
+    String viewName = "/";
     modelandView.setViewName(viewName);
     modelandView.addObject("Id", paramMap);
 
@@ -26,4 +26,4 @@ public class OrganizationController
     }
 
 
-}
+}*/
