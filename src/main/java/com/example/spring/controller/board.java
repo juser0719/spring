@@ -11,11 +11,11 @@ public class board
     {
         return "board";
     }
-    @RequestMapping(value = "/list")
+    /*@RequestMapping(value = "/list")
     public String list()
     {
         return "list";
-    }
+    }*/
     @RequestMapping(value = "/edit")
     public String edit()
     {

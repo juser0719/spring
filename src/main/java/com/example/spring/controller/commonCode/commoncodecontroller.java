@@ -1,4 +1,4 @@
-package com.example.spring.controller.commonCode;
+/*package com.example.spring.controller.commonCode;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,4 +30,4 @@ public class commoncodecontroller
     @RequestMapping(value = "/input",
     method = {RequestMethod.GET,RequestMethod.POST})
     public void edit(){}
-}
+}*/
