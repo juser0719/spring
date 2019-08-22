@@ -1,18 +1,16 @@
 package com.example.spring.service;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.example.spring.controller.MemberDao;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MemberService 
-{
-    public Object getObject(Object dataMap)
-    {
-        Map<String, Object> resultObject = new HashMap<String, Object>();
-        resultObject.put("MEMBER_ID", "29649870102");
-        resultObject.put("MEMBER_NAME", "NAME01");
+public class MemberService {
+    @Autowired
+    private MemberDao dao;
+    public Object getObject(Object dataMap){
+        Object resultObject = dao.getObject(dataMap);
         return resultObject;
     }
 }
