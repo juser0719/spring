@@ -1,8 +1,9 @@
-package com.example.spring.controller;
+/*package com.example.spring.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.example.spring.repository.StudentRepository;
 
@@ -19,19 +20,27 @@ public class StudentController
 {
     @Autowired
     private StudentRepository repository;
-    @RequestMapping(value = "/student/{action}")//, method = RequestMethod.GET)
-    public ModelAndView actionMethod(@PathVariable String action, ModelAndView modelandView) 
+    @RequestMapping(value = "/student/{action}")
+    public ModelAndView actionMethod( @RequestParam HashMap<String,Object> paramMap,@PathVariable String action, ModelAndView modelandView) 
     {
         String viewName = "/student/";
         List<Object> resultList = new ArrayList<Object>();
-        if ("student".equals(action)) 
+        Map<String,Object> resultMap = new HashMap<String,Object>();
+        if ("read".equals(action))  
         {
             viewName = viewName + action;
             resultList = (List) repository.findAll();
+
+            modelandView.setViewName(viewName);
+            modelandView.addObject("resultList", resultList);    
+            //resultMap = (Map) repository.getOne(Long.valueOf((String) paramMap.get("id")));
+        } else if (".equals(action)")
+        {
+            viewName = viewName + action;
+            resultMap = (Map) repository.getOne(Long.valueOf((String) paramMap.get("id")));
         }
-        modelandView.setViewName(viewName);
-        modelandView.addObject("resultList", resultList);
+
         return modelandView;
     }
 
-}
+}*/

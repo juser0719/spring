@@ -1,4 +1,4 @@
-package com.example.spring.controller;
+/*package com.example.spring.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,4 +35,4 @@ public class MemberController {
         return modelandView;
     }
     
-}
+}*/
