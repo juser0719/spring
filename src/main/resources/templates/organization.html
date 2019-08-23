@@ -8,7 +8,20 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
-            <table class="table table-dark border">
+        <form th:action=@{/organization} class="col-6">
+          <div>
+              <input type="text" class="form-control" id="ORGANIZATION_SEQ" name="ORGANIZATION_SEQ" placeholder="ORGANIZATION_SEQ">
+              <input type="text" class="form-control" id="NAME" name="NAME" placeholder="NAME">
+              <input type="text" class="form-control" id="TELEPHONE" name="TELEPHONE" placeholder="TELEPHONE">
+              <input type="text" class="form-control" id="ORDER_NUMBER" name="ORDER_NUMBER" placeholder="ORDER_NUMBER">
+              <input type="text" class="form-control" id="PARENT_ORGANIZATION_SEQ" name="PARENT_ORGANIZATION_SEQ" placeholder="PARENT_ORGANIZATION_SEQ">
+          </div>
+          <div class="d-flex justify-content-end py-3">
+              <button type="submit" class="btn btn-primary w-25">insert</button>
+          </div>
+          
+        </form>
+            <table class="table table-dark border col-6">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -18,10 +31,10 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr th:each = "resultData : ${resultMap}">
                         <th scope="row">1</th>
-                        <td><span th:text = ${resultMap.ORGANIZATION_SQL}></span></td>
-                        <td><p><span th:text = ${resultMap.NAME}></span></p></td>
+                        <td th:text = ${resultData.ORGANIZATION_SQL}></td>
+                        <td th:text = ${resultData.NAME}></td>
 
                       </tr> 
 
